@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "dotenv": "^18.0.0",
+    "espress": "^0.0.0",
     "express": "^5.2.1"
   }
 }

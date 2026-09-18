@@ -1,8 +1,7 @@
 import express from "express";
 
-import productRouter
-  from "./routes/product.routes";
-
+import productRouter from "./routes/product.routes";
+import categoryRouter from "./routes/category.routes"; 
 import {
   loggerMiddleware
 } from "./middlewares/logger.middleware";
@@ -33,11 +32,16 @@ app.use(
   loggerMiddleware
 );
 
+
 app.use(
   "/api/products",
   productRouter
 );
 
+app.use(
+  "/api/categories",
+  categoryRouter
+); 
 app.use(
   notFoundMiddleware
 );
